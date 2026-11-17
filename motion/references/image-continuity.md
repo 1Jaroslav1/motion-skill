@@ -1,0 +1,11 @@
+# Images and a consistent hero across a sequence
+
+When consistent images are needed, use a reference/editing workflow anchored to the original for one character, object or scene. To choose an allowed route see [image providers](image-providers.md). Preserve identity, proportions, construction, style, lighting and key details; change only the specified pose, position, angle or part of the action. For each new pose feed the same canonical set of references, not just the latest regeneration with accumulated drift. Don't create each next frame as an independent look-alike hero with no tie to the original.
+
+Before generating, fix the constant features, camera/shot size, anchors, scale, light source, background/alpha and what changes in each phase. Afterwards align anchor points, silhouette and contact; check face/anatomy, hands, object details, perspective and light direction. State the actual intervals in which each state appears in the video. The number of poses is set by the task: old local requirements of three or five poses are not a universal norm.
+
+Swapping three poses is a discrete series, not a smooth rotation. Crop, zoom, interpolation or 2.5D parallax of one image is not a new pose or a free 3D camera. A smooth transition needs sufficiently consistent intermediate states or real geometry; choose the method by task and name the result honestly. Don't pass off morphing of broken anatomy as smoothness. For smooth motion it is often better to animate a consistent cutout/rig than to generate every frame independently.
+
+For transparency create a real PNG with an alpha channel. A drawn checkerboard or flat background is not transparency. Check the alpha channel, the edge on dark and light backdrops, colour fringing and premultiplied alpha. Export and scaling must not bring back a baked background or a ragged edge.
+
+If an image is used in motion, give it a role in the action: hero, contact object, spatial layer, material or participant in a transformation. Tie its motion to the storyboard. A simple pan over a passive picture does not replace a promised action. Layers and inpainting of hidden areas must survive the chosen camera; don't promise a credible new angle from data the source doesn't contain.
